@@ -251,7 +251,7 @@ const config: HardhatUserConfig = {
                 count: 20,
             },
         },
-        iotex_testnet: {
+        iotexTestnet: {
             url: "https://babel-api.testnet.iotex.io",
             accounts: {
                 mnemonic: process.env.MNEMONIC || DEFAULT_MNEMONIC,
@@ -309,7 +309,7 @@ const config: HardhatUserConfig = {
                 },
             },
             {
-                network: 'iotex_testnet',
+                network: 'iotexTestnet',
                 chainId: 4690,
                 urls: {
                   apiURL: 'https://testnet.IoTeXscout.io/api',
