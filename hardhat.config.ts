@@ -242,6 +242,24 @@ const config: HardhatUserConfig = {
                 count: 20,
             },
         },
+        iotex: {
+            url: "https://babel-api.mainnet.iotex.io",
+            accounts: {
+                mnemonic: process.env.MNEMONIC || DEFAULT_MNEMONIC,
+                path: "m/44'/60'/0'/0",
+                initialIndex: 0,
+                count: 20,
+            },
+        },
+        iotex_testnet: {
+            url: "https://babel-api.testnet.iotex.io",
+            accounts: {
+                mnemonic: process.env.MNEMONIC || DEFAULT_MNEMONIC,
+                path: "m/44'/60'/0'/0",
+                initialIndex: 0,
+                count: 20,
+            },
+        },
     },
     gasReporter: {
         enabled: !!process.env.REPORT_GAS,
@@ -280,6 +298,22 @@ const config: HardhatUserConfig = {
                 urls: {
                     apiURL: "http://123:123:123:123:123/api",
                     browserURL: "http://123:123:123:123:123",
+                },
+            },
+            {
+                network: 'iotex',
+                chainId: 4689,
+                urls: {
+                  apiURL: 'https://IoTeXscout.io/api',
+                  browserURL: 'https://IoTeXscan.io',
+                },
+            },
+            {
+                network: 'iotex_testnet',
+                chainId: 4690,
+                urls: {
+                  apiURL: 'https://testnet.IoTeXscout.io/api',
+                  browserURL: 'https://testnet.IoTeXscan.io',
                 },
             },
         ],
